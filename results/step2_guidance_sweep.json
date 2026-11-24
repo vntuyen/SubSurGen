@@ -1,0 +1,47 @@
+[
+  {
+    "guidance": 1.0,
+    "wasserstein": 0.021990396985086102,
+    "centroid_corr": 0.8003046525697576,
+    "subtype_km_div": 0.07007152893298653,
+    "km_div": 0.051166219438298445,
+    "dispersion_ratio": 0.978593790383897,
+    "tstr_cindex": 0.6474130919099516
+  },
+  {
+    "guidance": 2.0,
+    "wasserstein": 0.06847465430879986,
+    "centroid_corr": 0.8810969924673003,
+    "subtype_km_div": 0.08246656697609926,
+    "km_div": 0.06046131039258281,
+    "dispersion_ratio": 1.3058776164161239,
+    "tstr_cindex": 0.6219560351697845
+  },
+  {
+    "guidance": 3.0,
+    "wasserstein": 0.12110732247624889,
+    "centroid_corr": 0.8662143851100669,
+    "subtype_km_div": 0.10466690519984168,
+    "km_div": 0.06901473005384541,
+    "dispersion_ratio": 1.633128794208526,
+    "tstr_cindex": 0.6018738025995932
+  },
+  {
+    "guidance": 4.0,
+    "wasserstein": 0.1646114800438008,
+    "centroid_corr": 0.7952679808524973,
+    "subtype_km_div": 0.12775441572557672,
+    "km_div": 0.07936247207718784,
+    "dispersion_ratio": 1.8865330019920787,
+    "tstr_cindex": 0.5902358021861241
+  },
+  {
+    "guidance": 6.0,
+    "wasserstein": 0.22508091044372794,
+    "centroid_corr": 0.8003491936943757,
+    "subtype_km_div": 0.12951198910640532,
+    "km_div": 0.098573526343699,
+    "dispersion_ratio": 2.2232154398684445,
+    "tstr_cindex": 0.5909980943024807
+  }
+]

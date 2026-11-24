@@ -1,0 +1,27 @@
+{
+  "guidance": 1.0,
+  "n_candidates": 5,
+  "candidates": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    6.0
+  ],
+  "selected_metrics": {
+    "wasserstein": 0.021990396985086102,
+    "subtype_km_div": 0.07007152893298653,
+    "km_div": 0.051166219438298445,
+    "centroid_corr": 0.8003046525697576,
+    "tstr_cindex": 0.6474130919099516,
+    "dispersion_ratio": 0.978593790383897
+  },
+  "dispersion_penalty": 1.0,
+  "weights": {
+    "wasserstein": 1.0,
+    "centroid_corr": 1.0,
+    "subtype_km_div": 1.0,
+    "km_div": 1.0,
+    "tstr_cindex": 1.0
+  }
+}

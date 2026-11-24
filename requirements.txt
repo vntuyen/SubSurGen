@@ -1,0 +1,19 @@
+# SubSurGen core (on Python 3.10)
+numpy>=1.24,<3.0
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.2
+matplotlib>=3.6
+torch==2.2.2
+opacus==1.4.0
+pandas>=2.0
+transformers<4.46
+# SDV provides GaussianCopula, CTGAN, TVAE.
+sdv>=1.17
+# synthcity provides TabDDPM, SurVAE, SurvivalGAN, SurvivalCTGAN.
+synthcity==0.2.12
+
+
+# --- baselines: verified working combination -------------------------------
+# Install with:
+#     pip install -r requirements.txt
