@@ -250,7 +250,17 @@ def _from_frame(df, p):
 
 
 # =============================================================== SDV (pip) ===
-def _sdv(kind, X, time, event, n, epochs):
+def _sdv(kind, X, time, event, n, epochs, seed=None):
+    """Fit an SDV synthesizer and sample n rows.
+
+    SDV reseeds its sampler with a fixed internal seed (FIXED_RNG_SEED = 73251)
+    the first time sample() is called after fit(), regardless of the global
+    numpy/torch seeds. Without `seed`, every run of a deterministic model such
+    as GaussianCopula therefore draws the identical cohort. Passing `seed`
+    hands the run's seed to SDV's sampler. CTGAN and TVAE are left on SDV's
+    default (seed=None) so their cached results stay reproducible; their runs
+    already differ because their training is stochastic.
+    """
     from sdv.metadata import SingleTableMetadata
     from sdv.single_table import (CTGANSynthesizer, GaussianCopulaSynthesizer,
                                   TVAESynthesizer)
@@ -262,13 +272,18 @@ def _sdv(kind, X, time, event, n, epochs):
            "TVAE": lambda: TVAESynthesizer(md, epochs=epochs),
            "GaussianCopula": lambda: GaussianCopulaSynthesizer(md)}[kind]()
     syn.fit(df)
+    if seed is not None:
+        syn._set_random_state(int(seed))   # SDV's own seeding hook (SDV >= 1.0)
     return _from_frame(syn.sample(num_rows=n), X.shape[1])
 
 
 def gaussian_copula(X, time, event, n, rng, labels=None, **kw):
     if HAVE_SDV:
         _record("GaussianCopula", "pip")
-        return _sdv("GaussianCopula", X, time, event, n, 0)
+        # The fit is deterministic, so without a per-run sampling seed all five
+        # runs would be identical (zero error bars). Derive it from the run's rng.
+        seed = int(rng.integers(0, 2 ** 31 - 1)) if rng is not None else None
+        return _sdv("GaussianCopula", X, time, event, n, 0, seed=seed)
     _record("GaussianCopula", "ref")
     return _ref_copula(X, time, event, n, rng)
 

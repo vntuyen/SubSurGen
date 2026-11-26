@@ -9,7 +9,7 @@ opacus==1.4.0
 pandas>=2.0
 transformers<4.46
 # SDV provides GaussianCopula, CTGAN, TVAE.
-sdv>=1.17
+sdv=1.17
 # synthcity provides TabDDPM, SurVAE, SurvivalGAN, SurvivalCTGAN.
 synthcity==0.2.12
 

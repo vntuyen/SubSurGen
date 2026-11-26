@@ -264,7 +264,7 @@
       40,
       34
     ],
-    "logrank_p_real": 0.00013764206289813282,
+    "logrank_p_real": 0.00013764206289813247,
     "subtypes_prognostic": true
   },
   {
@@ -331,7 +331,7 @@
       50,
       77
     ],
-    "logrank_p_real": 0.1292642255948671,
+    "logrank_p_real": 0.12926422559486703,
     "subtypes_prognostic": false
   },
   {
@@ -398,7 +398,7 @@
       702,
       632
     ],
-    "logrank_p_real": 0.7190800935508266,
+    "logrank_p_real": 0.8520117250245225,
     "subtypes_prognostic": false
   },
   {
@@ -465,7 +465,7 @@
       87,
       125
     ],
-    "logrank_p_real": 0.04686344222215943,
+    "logrank_p_real": 0.046863442222159456,
     "subtypes_prognostic": true
   },
   {
@@ -532,7 +532,7 @@
       156,
       184
     ],
-    "logrank_p_real": 0.22309046891754997,
+    "logrank_p_real": 0.22309046891754986,
     "subtypes_prognostic": false
   },
   {
@@ -599,7 +599,7 @@
       74,
       68
     ],
-    "logrank_p_real": 0.010274708537169086,
+    "logrank_p_real": 0.010274708537169103,
     "subtypes_prognostic": true
   },
   {
@@ -800,7 +800,7 @@
       84,
       50
     ],
-    "logrank_p_real": 0.08230343493849114,
+    "logrank_p_real": 0.08230343493849107,
     "subtypes_prognostic": false
   }
 ]
